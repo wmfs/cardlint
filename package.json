@@ -1,0 +1,21 @@
+{
+  "name": "@wmfs/cardlint",
+  "version": "0.0.1",
+  "description": "Validator for Adaptive Card JSON files.",
+  "author": "West Midlands Fire Service",
+  "homepage": "https://github.com/wmfs/cardlint#readme",
+  "keywords": [
+    "tymly",
+    "package",
+    "adaptive cards"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmfs/cardlint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wmfs/cardlint/issues"
+  },
+  "main": "lib/index.js"
+}
