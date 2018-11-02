@@ -1,10 +1,13 @@
 This document specifies a JSON object called an "Adaptive Card".
 An Adaptive Card MUST have a string field named "type" whose value MUST be equal to "AdaptiveCard".
-An Adaptive Card MAY have an array field named "actions".
-An Adaptive Card MAY have an array field named "body".
+An Adaptive Card MAY have an object-array field named "actions"; each element is an "Action".
+An Adaptive Card MAY have an object-array field named "body".
 An Adaptive Card MAY have an object field named "selectAction".
 An Adaptive Card MUST have a string field named "version".
 An Adaptive Card MAY have a string field named "fallbackText".
 An Adaptive Card MAY have a string field named "backgroundImage".
 An Adaptive Card MAY have a string field named "speak".
 An Adaptive Card MAY have a string field named "lang".
+An Action MUST have a string field named "type" whose value MUST be one of "Action.Submit", "Action.ShowCard", or "Action.OpenUrl".
+An Action MAY have a string field named "title".
+An Action MAY have a string field named "iconUrl".
