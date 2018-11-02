@@ -53,3 +53,9 @@ A Media MAY have a boolean field named "separator".
 A Media Source MUST have a string field named "url".
 A Media Source MUST have a string field named "mimeType".
 A Container MUST have an array field named "items".
+A Container MAY have an object field named "selectAction".
+A Container MAY have a string field named "style".
+A Container MAY have a string field named "verticalContentAlignment".
+A Container MAY have a string field named "id".
+A Container MAY have a string field named "spacing".
+A Container MAY have a boolean field named "separator".
