@@ -1,5 +1,5 @@
 This document specifies a JSON object called an "Adaptive Card".
-An Adaptive Card MUST have a string field named "type".
+An Adaptive Card MUST have a string field named "type" whose value MUST be equal to "AdaptiveCard".
 An Adaptive Card MAY have an array field named "actions".
 An Adaptive Card MAY have an array field named "body".
 An Adaptive Card MAY have an object field named "selectAction".
