@@ -1,0 +1,10 @@
+This document specifies a JSON object called an "Adaptive Card".
+An Adaptive Card MUST have a string field named "type".
+An Adaptive Card MAY have an array field named "actions".
+An Adaptive Card MAY have an array field named "body".
+An Adaptive Card MAY have an object field named "selectAction".
+An Adaptive Card MUST have a string field named "version".
+An Adaptive Card MAY have a string field named "fallbackText".
+An Adaptive Card MAY have a string field named "backgroundImage".
+An Adaptive Card MAY have a string field named "speak".
+An Adaptive Card MAY have a string field named "lang".
