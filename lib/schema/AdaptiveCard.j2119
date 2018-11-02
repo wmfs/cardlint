@@ -1,7 +1,8 @@
 This document specifies a JSON object called an "Adaptive Card".
 An Adaptive Card MUST have a string field named "type" whose value MUST be equal to "AdaptiveCard".
+An Adaptive Card MAY have a string field named "$schema".
 An Adaptive Card MAY have an object-array field named "actions"; each element is an "Action".
-An Adaptive Card MAY have an object-array field named "body".
+An Adaptive Card MAY have an object-array field named "body"; each element is a "Card Element".
 An Adaptive Card MAY have an object field named "selectAction".
 An Adaptive Card MUST have a string field named "version".
 An Adaptive Card MAY have a string field named "fallbackText".
@@ -9,5 +10,44 @@ An Adaptive Card MAY have a string field named "backgroundImage".
 An Adaptive Card MAY have a string field named "speak".
 An Adaptive Card MAY have a string field named "lang".
 An Action MUST have a string field named "type" whose value MUST be one of "Action.Submit", "Action.ShowCard", or "Action.OpenUrl".
+An Action whose "type" field's value is "Action.Submit" is a "Submit Action".
+An Action whose "type" field's value is "Action.ShowCard" is a "ShowCard Action".
+An Action whose "type" field's value is "Action.OpenUrl" is a "OpenUrl Action".
 An Action MAY have a string field named "title".
 An Action MAY have a string field named "iconUrl".
+An OpenUrl Action MUST have a string field named "url".
+A ShowCard Action MUST have an object field named "card".
+A Submit Action MAY have an object field named "data".
+A Card Element MUST have a string field named "type" whose value MUST be one of "Container", "TextBlock", "Image", "Media", or "MediaSource".
+A Card Element whose "type" field's value is "TextBlock" is a "Text Block".
+A Card Element whose "type" field's value is "Image" is an "Image".
+A Card Element whose "type" field's value is "Media" is a "Media".
+A Card Element whose "type" field's value is "MediaSource" is a "Media Source".
+A Text Block MUST have a string field named "text".
+A Text Block MAY have a string field named "color".
+A Text Block MAY have a string field named "horizontalAlignment".
+A Text Block MAY have a boolean field named "isSubtle".
+A Text Block MAY have a positive-integer field named "maxLines".
+A Text Block MAY have a string field named "size".
+A Text Block MAY have a string field named "weight".
+A Text Block MAY have a boolean field named "wrap".
+A Text Block MAY have a string field named "id".
+A Text Block MAY have a string field named "spacing".
+A Text Block MAY have a boolean field named "separator".
+An Image MUST have a string field named "url".
+An Image MAY have a string field named "altText".
+An Image MAY have a string field named "horizontalAlignment".
+An Image MAY have a object field named "selectAction".
+An Image MAY have a string field named "size".
+An Image MAY have a string field named "style".
+An Image MAY have a string field named "id".
+An Image MAY have a string field named "spacing".
+An Image MAY have a boolean field named "separator".
+A Media MAY have a object field named "sources".
+A Media MAY have a string field named "poster".
+A Media MAY have a string field named "altText".
+A Media MAY have a string field named "id".
+A Media MAY have a string field named "spacing".
+A Media MAY have a boolean field named "separator".
+A Media Source MUST have a string field named "url".
+A Media Source MUST have a string field named "mimeType".
