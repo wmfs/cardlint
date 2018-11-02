@@ -15,7 +15,7 @@ describe('Adaptive Cards Lint', () => {
 
   it('Valid', () => {
     const result = validator.validate(CARDS.valid)
-    console.log(result)
+    expect(result.length).to.eql(0)
   })
 
   it('Missing type', () => {

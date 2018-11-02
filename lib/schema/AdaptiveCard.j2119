@@ -23,6 +23,7 @@ A Card Element whose "type" field's value is "TextBlock" is a "Text Block".
 A Card Element whose "type" field's value is "Image" is an "Image".
 A Card Element whose "type" field's value is "Media" is a "Media".
 A Card Element whose "type" field's value is "MediaSource" is a "Media Source".
+A Card Element whose "type" field's value is "Container" is a "Container".
 A Text Block MUST have a string field named "text".
 A Text Block MAY have a string field named "color".
 A Text Block MAY have a string field named "horizontalAlignment".
@@ -51,3 +52,4 @@ A Media MAY have a string field named "spacing".
 A Media MAY have a boolean field named "separator".
 A Media Source MUST have a string field named "url".
 A Media Source MUST have a string field named "mimeType".
+A Container MUST have an array field named "items".
