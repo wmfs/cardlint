@@ -77,9 +77,6 @@
               "title": "title",
               "value": "value",
               "bannedField": "banned"
-            },
-            {
-              "type": "NotAFact"
             }
           ],
           "id": "id",

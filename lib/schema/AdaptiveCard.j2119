@@ -78,18 +78,17 @@ A Contained Element whose "type" field's value is "Column" is a "Column".
 A Contained Element whose "type" field's value is "Fact" is a "Fact".
 A Contained Element whose "type" field's value is "Image" is an "Image".
 A Column MUST have a string field named "type".
-A Column MUST have an array field named "items"; each element is a "Card Element".
+A Column MUST have an array field named "items".
 A Column MAY have an object field named "selectAction".
 A Column MAY have a string field named "style".
 A Column MAY have a string field named "width".
 A Column MAY have a string field named "id".
 A Column MAY have a string field named "spacing".
 A Column MAY have a boolean field named "separator".
-A Fact Set MUST have an array field named "facts"; each element is a "Contained Element".
+A Fact Set MUST have an array field named "facts".
 A Fact Set MAY have a string field named "id".
 A Fact Set MAY have a string field named "spacing".
 A Fact Set MAY have a boolean field named "separator".
-A Fact MUST have a string field named "type".
 A Fact MUST have a string field named "title".
 A Fact MUST have a string field named "value".
 An Image Set MUST have an array field named "images"; each element is a "Contained Element".

@@ -22,8 +22,6 @@ describe('Adaptive Cards Lint', () => {
     'Field "bannedField" not allowed in Adaptive Card.body[2].items[1].columns[0]',
     'Adaptive Card.body[2].items[1].columns[1].type is "NotAColumn", not one of the allowed values Column,Fact,Image',
     'Field "bannedField" not allowed in Adaptive Card.body[2].items[1]',
-    'Field "bannedField" not allowed in Adaptive Card.body[2].items[2].facts[0]',
-    'Adaptive Card.body[2].items[2].facts[1].type is "NotAFact", not one of the allowed values Column,Fact,Image',
     'Field "bannedField" not allowed in Adaptive Card.body[2].items[2]',
     'Field "bannedField" not allowed in Adaptive Card.body[2].items[3].images[0]',
     'Adaptive Card.body[2].items[3].images[1].type is "NotAnImage", not one of the allowed values Column,Fact,Image',
@@ -55,7 +53,7 @@ describe('Adaptive Cards Lint', () => {
   it('Adaptive Card and Card Element Test', () => {
     const result = validator.validate(CARDS.acCar)
     let simRes = []
-    expect(result.length).to.eql(16)
+    expect(result.length).to.eql(14)
     for (let i = 0; i < result.length; i++) {
       for (let j = 0; j < cardElementErrorBattery.length; j++) {
         if (result[i] === cardElementErrorBattery[j]) {
