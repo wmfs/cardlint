@@ -1,0 +1,41 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "actions": [
+    {
+      "type": "Action.ShowCard",
+      "title": "Comment",
+      "iconUrl": "iconUrl",
+      "bannedField": "banned",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Input.Text",
+            "id": "comment",
+            "isMultiline": true,
+            "placeholder": "Enter your comment"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "OK",
+            "data": {}
+          }
+        ]
+      }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "View",
+      "url": "http://adaptivecards.io"
+    }
+  ],
+  "fallbackText": "fallback",
+  "backgroundImage": "bg image",
+  "speak": "speak",
+  "lang": "eng",
+  "bannedField": "banned"
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "HelloWorld",
+      "color": "green",
+      "horizontalAlignment": "left",
+      "isSubtle": false,
+      "maxLines": 12,
+      "size": "big",
+      "weight": "large",
+      "wrap": true,
+      "id": "id",
+      "spacing": "12pt",
+      "separator": true,
+      "bannedField": "banned"
+    },
+    {
+      "type": "Media",
+      "sources": [
+        {
+          "type": "MediaSource",
+          "url": "a.b/c",
+          "mimeType": "french",
+          "bannedField": "banned"
+        }
+      ],
+      "poster": "poster",
+      "altText": "alt",
+      "id": "id",
+      "spacing": "12pt",
+      "separator": true,
+      "bannedField": "banned"
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "text",
+          "maxLines": -12
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+
+              ],
+              "selectAction": {},
+              "style": "stylish",
+              "width": "wide",
+              "id": "id",
+              "spacing": "12pt",
+              "separator": true,
+              "bannedField": "banned"
+            },
+            {
+              "type": "NotAColumn"
+            }
+          ],
+          "selectAction": {},
+          "id": "id",
+          "spacing": "12pt",
+          "separator": true,
+          "bannedField": "banned"
+        },
+        {
+          "type": "FactSet",
+          "facts": [
+            {
+              "type": "Fact",
+              "title": "title",
+              "value": "value",
+              "bannedField": "banned"
+            },
+            {
+              "type": "NotAFact"
+            }
+          ],
+          "id": "id",
+          "spacing": "12pt",
+          "separator": true,
+          "bannedField": "banned"
+        },
+        {
+          "type": "ImageSet",
+          "images": [
+            {
+              "type": "Image",
+              "url": "a.b/c",
+              "altText": "alt",
+              "horizontalAlignment": "right",
+              "selectAction": {},
+              "size": "big",
+              "style": "stylish",
+              "id": "id",
+              "spacing": "12pt",
+              "separator": true,
+              "bannedField": "banned"
+            },
+            {
+              "type": "NotAnImage"
+            }
+          ],
+          "imageSize": "big",
+          "id": "id",
+          "spacing": "12pt",
+          "separator": true,
+          "bannedField": "banned"
+        }
+      ],
+      "selectAction": {},
+      "style": "stylish",
+      "verticalContentAlignment": "top",
+      "id": "id",
+      "spacing": "12pt",
+      "separator": true,
+      "bannedField": "banned"
+    },
+    {
+      "type": "Non-existent"
+    }
+  ],
+  "fallbackText": "fallback",
+  "backgroundImage": "bg image",
+  "speak": "speak",
+  "lang": "eng",
+  "bannedField": "banned"
+}

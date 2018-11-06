@@ -24,11 +24,8 @@ A Card Element whose "type" field's value is "Image" is an "Image".
 A Card Element whose "type" field's value is "Media" is a "Media".
 A Card Element whose "type" field's value is "MediaSource" is a "Media Source".
 A Card Element whose "type" field's value is "Container" is a "Container".
-A Card Element whose "type" field's value is "ColumnSet" is a "Column Set".
 A Card Element whose "type" field's value is "Column" is a "Column".
-A Card Element whose "type" field's value is "FactSet" is a "Fact Set".
 A Card Element whose "type" field's value is "Fact" is a "Fact".
-A Card Element whose "type" field's value is "ImageSet" is a "Image Set".
 A Text Block MUST have a string field named "text".
 A Text Block MAY have a string field named "color".
 A Text Block MAY have a string field named "horizontalAlignment".
@@ -40,6 +37,7 @@ A Text Block MAY have a boolean field named "wrap".
 A Text Block MAY have a string field named "id".
 A Text Block MAY have a string field named "spacing".
 A Text Block MAY have a boolean field named "separator".
+An Image MUST have a string field named "type" whose value MUST be equal to "Image".
 An Image MUST have a string field named "url".
 An Image MAY have a string field named "altText".
 An Image MAY have a string field named "horizontalAlignment".
@@ -49,7 +47,7 @@ An Image MAY have a string field named "style".
 An Image MAY have a string field named "id".
 An Image MAY have a string field named "spacing".
 An Image MAY have a boolean field named "separator".
-A Media MAY have a field named "sources".
+A Media MAY have a field named "sources"; each element is a "Media Source".
 A Media MAY have a string field named "poster".
 A Media MAY have a string field named "altText".
 A Media MAY have a string field named "id".
@@ -57,32 +55,44 @@ A Media MAY have a string field named "spacing".
 A Media MAY have a boolean field named "separator".
 A Media Source MUST have a string field named "url".
 A Media Source MUST have a string field named "mimeType".
-A Container MUST have an array field named "items".
+A Media Source MUST have a string field named "type" whose value MUST be equal to "MediaSource".
+A Container MUST have an array field named "items"; each element is a "Container Element".
 A Container MAY have an object field named "selectAction".
 A Container MAY have a string field named "style".
 A Container MAY have a string field named "verticalContentAlignment".
 A Container MAY have a string field named "id".
 A Container MAY have a string field named "spacing".
 A Container MAY have a boolean field named "separator".
-A Column Set MAY have an array field named "columns"; each element is a "Column".
+A Container Element MUST have a string field named "type" whose value MUST be one of "TextBlock", "ColumnSet", "FactSet", or "ImageSet".
+A Container Element whose "type" field's value is "ColumnSet" is a "Column Set".
+A Container Element whose "type" field's value is "FactSet" is a "Fact Set".
+A Container Element whose "type" field's value is "ImageSet" is a "Image Set".
+A Container Element whose "type" field's value is "TextBlock" is a "Text Block".
+A Column Set MAY have an array field named "columns"; each element is a "Contained Element".
 A Column Set MAY have an object field named "selectAction".
 A Column Set MAY have a string field named "id".
 A Column Set MAY have a string field named "spacing".
 A Column Set MAY have a boolean field named "separator".
-A Column MUST have an array field named "items".
+A Contained Element MUST have a string field named "type" whose value MUST be one of "Column", "Fact", or "Image".
+A Contained Element whose "type" field's value is "Column" is a "Column".
+A Contained Element whose "type" field's value is "Fact" is a "Fact".
+A Contained Element whose "type" field's value is "Image" is an "Image".
+A Column MUST have a string field named "type".
+A Column MUST have an array field named "items"; each element is a "Card Element".
 A Column MAY have an object field named "selectAction".
 A Column MAY have a string field named "style".
 A Column MAY have a string field named "width".
 A Column MAY have a string field named "id".
 A Column MAY have a string field named "spacing".
 A Column MAY have a boolean field named "separator".
-A Fact Set MUST have an array field named "facts"; each element is a "Fact".
+A Fact Set MUST have an array field named "facts"; each element is a "Contained Element".
 A Fact Set MAY have a string field named "id".
 A Fact Set MAY have a string field named "spacing".
 A Fact Set MAY have a boolean field named "separator".
+A Fact MUST have a string field named "type".
 A Fact MUST have a string field named "title".
 A Fact MUST have a string field named "value".
-An Image Set MUST have an array field named "images"; each element is an "Image".
+An Image Set MUST have an array field named "images"; each element is a "Contained Element".
 An Image Set MAY have a string field named "imageSize".
 An Image Set MAY have a string field named "id".
 An Image Set MAY have a string field named "spacing".
