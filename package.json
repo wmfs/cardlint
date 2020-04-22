@@ -28,6 +28,7 @@
     "standard": "14.3.3"
   },
   "scripts": {
-    "test": "nyc mocha && standard"
+    "test": "nyc mocha && standard",
+    "lint": "standard" 
   }
 }

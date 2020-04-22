@@ -52,7 +52,7 @@ describe('Adaptive Cards Lint', () => {
 
   it('Adaptive Card and Card Element Test', () => {
     const result = validator.validate(CARDS.acCar)
-    let simRes = []
+    const simRes = []
     expect(result.length).to.eql(14)
     for (let i = 0; i < result.length; i++) {
       for (let j = 0; j < cardElementErrorBattery.length; j++) {
@@ -63,9 +63,9 @@ describe('Adaptive Cards Lint', () => {
       }
     }
     simRes.forEach(msg => {
-      let resIn = result.indexOf(msg)
+      const resIn = result.indexOf(msg)
       result.splice(resIn, 1)
-      let batIn = cardElementErrorBattery.indexOf(msg)
+      const batIn = cardElementErrorBattery.indexOf(msg)
       cardElementErrorBattery.splice(batIn, 1)
     })
     expect(result.length).to.eql(0)
